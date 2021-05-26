@@ -1,9 +1,7 @@
-// TableClassCpp.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+
 
 #include <iostream>
 
-constexpr size_t size = 1000;
 
 class SpecialTable {       // The class
 public:             // Access specifier
