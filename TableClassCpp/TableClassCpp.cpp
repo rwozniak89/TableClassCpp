@@ -2,11 +2,11 @@
 
 
 class SpecialTable {       // The class
-public:             // Access specifier
+private:
 
 	int* dynamicArray;
 	int len = 0;
-
+public:             // Access specifier
 	void addValueOnEnd(int x)
 	{
 		if (len == 0) {
@@ -27,6 +27,7 @@ public:             // Access specifier
 				dynamicArray[i] = tempDynamicArray[i];
 			}
 			dynamicArray[newLen - 1] = x;
+			delete[] tempDynamicArray;
 		}
 		len++;
 	}
@@ -53,7 +54,6 @@ public:             // Access specifier
 				result = false;
 				break;
 			}
-			before = dynamicArray[i];
 		}
 		return result;
 	}
@@ -157,7 +157,7 @@ int main()
 
 
 	std::cout << "ppkt1: Wstawianie elementow..." << std::endl;
-	for (int i = 1; i <= 12; i++) myObj.addValueOnEnd(rand() / ((RAND_MAX + 1u) / 10));
+	for (int i = 1; i <= 12; i++) myObj.addValueOnEnd(rand() % 10);
 	std::cout << "ppkt1: Wyswietlenie elementow..." << std::endl;
 	myObj.printTable();
 	int ppkt2b = myObj.checkEqualityOfAllValues();
