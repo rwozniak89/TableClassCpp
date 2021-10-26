@@ -147,7 +147,7 @@ int main()
 	std::cout << "Start!\n";
 
 	SpecialTable myObj;
-
+	std::cout << "TEST" << std::endl;
 	std::cout << "ppkt1: Wstawianie elementow..." << std::endl;
 	for (int i = 1; i <= 3; i++) myObj.addValueOnEnd(1);
 	std::cout << "ppkt1: Wyswietlenie elementow..." << std::endl;
