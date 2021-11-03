@@ -146,6 +146,9 @@ int main()
 {
 	std::cout << "Start!\n";
 
+
+	//test
+
 	SpecialTable myObj;
 	std::cout << "TEST2" << std::endl;
 	std::cout << "ppkt1: Wstawianie elementow..." << std::endl;
